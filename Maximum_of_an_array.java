@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Ultimate{
     public static void main(String[] args)
@@ -5,18 +6,13 @@ public class Ultimate{
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int[] arr=new int[n];
-        for(int i=0;i<n;i++)
+         for(int i=0;i<n;i++)
         {
             arr[i]=sc.nextInt();
         }
-        int c=arr[0];
-        for(int i=0;i<n;i++)
-        {
-            if(c<arr[i])
-            {
-                c=arr[i];
-            }
-        }
-        System.out.println(c);
+         Arrays.sort(arr);
+         int max=arr[n-1];
+            System.out.print(max);
+        
     }
 }
