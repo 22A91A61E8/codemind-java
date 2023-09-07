@@ -1,28 +1,12 @@
-import java.util.Scanner;
-public class Ultimate
-{
+import java.util.*;
+public class ura{
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int c=0;
-        int square=n*n;
-        int temp=n;
-        while(temp>0)
-        {
-            c++;
-            temp=temp/10;
-        }
-        int lastd=(int)(square%(Math.pow(10,c)));
-        if(n==lastd)
-        {
-            System.out.print("Automorphic Number");
-        }
-        else
-        {
-            System.out.print("Not an Automorphic Number");
-        }
-        
-
+        int s=n*n;
+        String s1=Integer.toString(n);
+        String s2=Integer.toString(s);
+        System.out.print(s2.endsWith(s1) ?"Automorphic Number" :"Not an Automorphic Number");
     }
 }
